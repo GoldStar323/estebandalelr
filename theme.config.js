@@ -1,11 +1,13 @@
 export default {
-  repository: 'https://github.com/shuding/nextra',
-  titleSuffix: ' – Nextra',
+  repository: 'https://github.com/EstebanDalelR/estebandalelr-blog',
+  titleSuffix: ' – Blog',
   logo: (
     <>
-      <span className="mr-2 font-extrabold hidden md:inline">Nextra</span>
+      <span className="mr-2 font-extrabold hidden md:inline">
+        Esteban Dalel R
+      </span>
       <span className="text-gray-600 font-normal hidden md:inline">
-        The Next.js Site Builder
+        I make good software and tell bad jokes
       </span>
     </>
   ),
@@ -15,15 +17,18 @@ export default {
       <meta name="theme-color" content="#ffffff" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="en" />
-      <meta name="description" content="Nextra: the Next.js site builder" />
-      <meta name="og:description" content="Nextra: the Next.js site builder" />
+      <meta name="description" content="Esteban Dalel R | Blog" />
+      <meta name="og:description" content="Esteban Dalel R | Blog" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content="https://nextra.vercel.app/og.png" />
-      <meta name="twitter:site:domain" content="nextra.vercel.app" />
-      <meta name="twitter:url" content="https://nextra.vercel.app" />
-      <meta name="og:title" content="Nextra: Next.js static site generator" />
-      <meta name="og:image" content="https://nextra.vercel.app/og.png" />
-      <meta name="apple-mobile-web-app-title" content="Nextra" />
+      <meta
+        name="twitter:image"
+        content="https://estebandalelr.co/esteban.jfif"
+      />
+      <meta name="twitter:site:domain" content="estebandalelr.co" />
+      <meta name="twitter:url" content="https://estebandalelr.co" />
+      <meta name="og:title" content="Esteban Dalel R | Blog" />
+      <meta name="og:image" content="https://estebandalelr.co/esteban.jfif" />
+      <meta name="apple-mobile-web-app-title" content="Esteban Dalel R" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -61,5 +66,5 @@ export default {
   nextLinks: true,
   footer: true,
   footerEditOnGitHubLink: true,
-  footerText: <>MIT {new Date().getFullYear()} © Nextra.</>,
+  footerText: <>By Esteban Dalel R, using Nextra.</>,
 }
