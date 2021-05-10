@@ -65,6 +65,9 @@ export default {
   prevLinks: true,
   nextLinks: true,
   footer: true,
-  footerEditOnGitHubLink: true,
-  footerText: <>By <a href="https://estebandalelr.co">Esteban Dalel R</a>, using Nextra.</>,
+  footerEditOnGitHubLink: false,
+  footerText: <>
+  <p>By <a href="https://estebandalelr.co">Esteban Dalel R</a>, using Nextra.</p>
+  <p>Found an error? <a href="https://twitter.com/estebandalelr">Send me a tweet</a></p>
+  </>
 }
