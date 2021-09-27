@@ -13,12 +13,14 @@ export default {
   ),
   head: (
     <>
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="theme-color" content="#ffffff" />
+      <meta name="msapplication-TileColor" content="#be3336" />
+      <meta name="theme-color" content="#be3336" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="en" />
       <meta name="description" content="Esteban Dalel R | Blog" />
-      <meta name="og:description" content="Esteban Dalel R | Blog" />
+      <meta name="og:title" content="Esteban Dalel R | Blog" />
+      <meta name="og:description" content="I make good software and tell bad jokes. Here are my thoughts. All opinions are mine. Open to discussion." />
+      <meta name="og:image" content="https://blog.estebandalelr.co/estebandalelr-square.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:image"
@@ -26,8 +28,6 @@ export default {
       />
       <meta name="twitter:site:domain" content="estebandalelr.co" />
       <meta name="twitter:url" content="https://estebandalelr.co" />
-      <meta name="og:title" content="Esteban Dalel R | Blog" />
-      <meta name="og:image" content="https://blog.estebandalelr.co/estebandalelr-square.jpg" />
       <meta name="apple-mobile-web-app-title" content="Esteban Dalel R" />
       <link
         rel="apple-touch-icon"
