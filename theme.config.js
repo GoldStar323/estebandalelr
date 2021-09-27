@@ -22,7 +22,7 @@ export default {
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:image"
-        content="https://estebandalelr.co/esteban.jfif"
+        content="https://estebandalelr.co/estebandalelr-square.jpg"
       />
       <meta name="twitter:site:domain" content="estebandalelr.co" />
       <meta name="twitter:url" content="https://estebandalelr.co" />
