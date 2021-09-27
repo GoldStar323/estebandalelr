@@ -20,8 +20,9 @@ export default {
       <meta name="description" content="Esteban Dalel R | Blog" />
       <meta name="author" content="Esteban Dalel R" /> 
       <meta name="image" property="og:image" content="https://blog.estebandalelr.co/estebandalelr-square.jpg" />
+      <meta name="description" property="og:description" content="I make good software and tell bad jokes. Here are my thoughts. All opinions are mine. Always open to discussion." />
       <meta name="og:title" content="Esteban Dalel R | Blog" />
-      <meta name="og:description" content="I make good software and tell bad jokes. Here are my thoughts. All opinions are mine. Open to discussion." />
+      <meta name="og:description" content="I make good software and tell bad jokes. Here are my thoughts. All opinions are mine. Always open to discussion." />
       <meta name="og:image" content="https://blog.estebandalelr.co/estebandalelr-square.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
