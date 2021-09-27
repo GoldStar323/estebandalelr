@@ -22,12 +22,12 @@ export default {
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:image"
-        content="https://estebandalelr.co/estebandalelr-square.jpg"
+        content="https://blog.estebandalelr.co/estebandalelr-square.jpg"
       />
       <meta name="twitter:site:domain" content="estebandalelr.co" />
       <meta name="twitter:url" content="https://estebandalelr.co" />
       <meta name="og:title" content="Esteban Dalel R | Blog" />
-      <meta name="og:image" content="https://estebandalelr.co/esteban.jfif" />
+      <meta name="og:image" content="https://blog.estebandalelr.co/estebandalelr-square.jpg" />
       <meta name="apple-mobile-web-app-title" content="Esteban Dalel R" />
       <link
         rel="apple-touch-icon"
