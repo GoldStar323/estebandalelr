@@ -18,6 +18,8 @@ export default {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="en" />
       <meta name="description" content="Esteban Dalel R | Blog" />
+      <meta name="author" content="Esteban Dalel R"> 
+      <meta name="image" property="og:image" content="https://blog.estebandalelr.co/estebandalelr-square.jpg">
       <meta name="og:title" content="Esteban Dalel R | Blog" />
       <meta name="og:description" content="I make good software and tell bad jokes. Here are my thoughts. All opinions are mine. Open to discussion." />
       <meta name="og:image" content="https://blog.estebandalelr.co/estebandalelr-square.jpg" />
