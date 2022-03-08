@@ -4,7 +4,7 @@
 
 **For humans:** Take 2 commits and start removing halves until you find the error.
 
-The command `git blame` has been my ally in those times that the bug is a mistery. It has allowed me to go back in history and see the commit that broke something. Usually it's me being a detective for my own murder.
+The command `git bisect` has been my ally in those times that the bug is a mistery. It has allowed me to go back in history and see the commit that broke something. Usually it's me being a detective for my own murder.
 
 As simple as it sounds, it takes a "correct" commit and a broken one and with binary search, it allows you to find the offending one _fast_.
  
@@ -14,35 +14,35 @@ As simple as it sounds, it takes a "correct" commit and a broken one and with bi
 
 ```shell 
 cd 
-mkdir wm-git-blame
-cd wm-git-blame
+mkdir wm-git-bisect
+cd wm-git-bisect
 git init
-echo 'It might not be the right time' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 1'
-echo 'I might not be the right one' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 2'
-echo 'But there´s something about us I want to say' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 3'
-echo 'Cause there´s something between us anyway' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 4'
-echo 'I might not be the right one' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 5'
-echo 'It might not be the right time' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 6'
-echo 'But there´s something about us I´ve got to do' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 7'
-echo 'Some kind of secret I will share with you' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 9'
-echo 'I need you more than anythin´ in my life' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 10'
-sed -i -e 's/something/nothing/g' wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'change something for nothing'
-echo 'I want you more than anythin´ in my life' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 11'
-echo 'I´ll miss you more than anyone in my life' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 12'
-echo 'I love you more than anyone in my life' >> wm-git-blame.txt
-git add wm-git-blame.txt && git commit -m 'Add line 13'
+echo 'It might not be the right time' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 1'
+echo 'I might not be the right one' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 2'
+echo 'But there´s something about us I want to say' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 3'
+echo 'Cause there´s something between us anyway' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 4'
+echo 'I might not be the right one' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 5'
+echo 'It might not be the right time' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 6'
+echo 'But there´s something about us I´ve got to do' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 7'
+echo 'Some kind of secret I will share with you' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 9'
+echo 'I need you more than anythin´ in my life' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 10'
+sed -i -e 's/something/nothing/g' wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'change something for nothing'
+echo 'I want you more than anythin´ in my life' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 11'
+echo 'I´ll miss you more than anyone in my life' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 12'
+echo 'I love you more than anyone in my life' >> wm-git-bisect.txt
+git add wm-git-bisect.txt && git commit -m 'Add line 13'
 ```
 As you can see, after adding line 10, we change a word in line 4. This is where our code broke, but we continued working without noticing for a while, just like the real world. 
 
@@ -92,7 +92,7 @@ Bisecting: 4 revisions left to test after this (roughly 2 steps)
 ```
 Now, the second part is the interesting one. Notice how a commit that we didn't input was printed? Well, now it is checked out and we can test it to know if it's a *good* or *bad* one.
 ```shell 
-cat wm-git-blame.txt
+cat wm-git-bisect.txt
 ```
 We can see that this specific commit, even if incomplete, has the correct lyrics, so we'll tell git this one is good.
 ```shell 
@@ -105,7 +105,7 @@ Bisecting: 2 revisions left to test after this (roughly 1 step)
 ```
 We check again.
 ```shell 
-cat wm-git-blame.txt
+cat wm-git-bisect.txt
 ```
 *Aha!* We have found the error, or bug in a real development environment.
 ```shell 
@@ -118,7 +118,7 @@ Bisecting: 0 revisions left to test after this (roughly 0 steps)
 ```
 We check for the last time.
 ```shell 
-cat wm-git-blame.txt
+cat wm-git-bisect.txt
 ```
 No error so...
 ```shell 
@@ -133,7 +133,7 @@ Date:   Mon Mar 7 11:07:06 2022 -0600
 
     change something for nothing
 
-:100644 100644 ebecac7931b48bb4aaa63e1e2a8624712d959eb2 ffc445f53b954c6ad8c05a8a860920df064388d1 M      wm-git-blame.txt
+:100644 100644 ebecac7931b48bb4aaa63e1e2a8624712d959eb2 ffc445f53b954c6ad8c05a8a860920df064388d1 M      wm-git-bisect.txt
 ```
 So we close the case, it was me (as it's common), we can fix it commit and close the Jira ticket.
 ```shell 
