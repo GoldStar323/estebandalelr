@@ -11,6 +11,7 @@ As simple as it sounds, it takes a "correct" commit and a broken one and with bi
  This is probably as far as I can go on explaning so let's see it with an example, using my favorite song.
 
 > This code will go to your home directory and create a folder with a git history for us to experiment. Read it first, and go ahead and run it.
+
 ```shell 
 cd 
 mkdir wm-git-blame
@@ -77,6 +78,7 @@ git bisect
 ```
 This command has no output. Let's give it some input.
 > You can use short commit IDs but we already have the long ones.
+
 ```shell
 git bisect bad 778d62a21ae08ff38db34bf9465db423f7e990fb
 git bisect good 6e83eec542f915bdaeb9565fe5dbd1c6cfaec4d6
@@ -108,7 +110,7 @@ cat wm-git-blame.txt
 ```shell 
 git bisect bad
 ```
-Outpust tells us that this is the last step.
+Output tells us that this is the last step.
 ```shell 
 Bisecting: 0 revisions left to test after this (roughly 0 steps)
 [c93b967c5d5e7a601e83c3adda2b3ab814ad10f1] Add line 10
