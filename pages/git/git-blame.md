@@ -55,6 +55,7 @@ This will bring up our git history, where we'll find the offending commit, but t
 
 Now, you know tht the latest commit ("Add line 13") is broken, this will be the *bad* commit. You need a commit that is considered *good*, so we'll take the original one where we added the line ("Add line 4"). This probably will take longer, skip back a lot and test.
 > Your commit IDs will be different, remember to use the output on your console.
+
 ```shell 
 commit 778d62a21ae08ff38db34bf9465db423f7e990fb (HEAD -> master)                                                                     
 Add line 13    
