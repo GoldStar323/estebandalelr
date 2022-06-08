@@ -1,4 +1,4 @@
-# The cool git: 2. Git switch
+# The cool git: Git switch
 
 **TL;DR:** Changes branches.
 
@@ -15,9 +15,57 @@ This was the thought process of the Git team and they decided to fix in a retro 
 This command, much smaller in surface does only _one_ thing: switching branches. It also has very few options, but let's see it with an example.
 
 Let's say your repo has these branches:
+
 ```shell 
 > git branch
 * feature
   master
   dev
 ```
+
+You want to jump to another branch? Use ```switch```
+
+```shell 
+> git switch dev
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+```
+
+> Look at that, it checks if we are up to date, but what happens if we aren't?
+
+You want to jump to the _main_ branch? Use ```switch```
+
+```shell 
+> git switch main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 6 commits, and can be fast-forwarded.
+```
+
+You want to create another branch? Use ```switch```
+
+```shell 
+> git switch -c bugfix
+Switched to a new branch 'bugfix'
+> git branch
+* bugfix
+  dev
+  master
+  feature
+```
+
+But the aha! moment comes when you ```switch``` to a remote branch
+
+```shell 
+git switch feature/other-remote-branch
+Switched to a new branch 'feature/other-remote-branch'
+branch 'feature/other-remote-branch' set up to track 'origin/feature/other-remote-branch'.
+```
+
+And what happens when you try a file with ```switch```? Nothing! 
+
+```shell 
+git switch package.json
+fatal: invalid reference: package.json
+```
+
+And this _is a feature_. No more losing your files for autocompleting as with ```checkout```

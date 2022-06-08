@@ -1,5 +1,5 @@
 {
   "git-bisect": "Git Bisect",
-  "git-switch": "Git Switch",
-  "git-prune-remote": "Remote prune"
+  "git-prune-remote": "Remote prune",
+  "git-switch": "Git Switch"
 }
